@@ -10,6 +10,7 @@ describe('PayPal Tests', () => {
         cy.get('[id$=radio-personal]').should('be.checked')
         cy.get('.btn').contains('Next').click()
     })
+
     it('Submit empty form', () => {
         cy.get('.vx_btn').contains('Next').click()
         cy.get('#PageMainForm').should('contain', 'Email is required')
@@ -29,7 +30,6 @@ describe('PayPal Tests', () => {
         cy.get('.vx_btn').contains('Next').click()
         cy.get('.notification').contains('Walked away? Or stuck for some reason? Please start over for your security.')
     })
-
 
 
 })
